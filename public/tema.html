@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda ANA Pronto Pago - Ana Seguros</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Logo superior izquierdo -->
+    <div class="logo-top-left">
+        <a href="/">
+            <img src="/images/logopng.png" alt="ANA SEGUROS" class="logo">
+        </a>
+    </div>
+    
+    <!-- Header del tema -->
+    <header class="header">
+        <div class="container">
+            <h1>Centro de Ayuda ANA Pronto Pago</h1>
+            <p>ANA Seguros - Guía paso a paso</p>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <div class="container">
+        <div class="nav-buttons">
+            <div class="breadcrumb">
+                <a href="/">← Volver al inicio</a>
+            </div>
+            <div class="navigation-controls">
+                <button id="prevBtn" class="btn btn-secondary" onclick="navegarTema('prev')">← Anterior</button>
+                <button id="nextBtn" class="btn btn-primary" onclick="navegarTema('next')">Siguiente →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido del tema -->
+    <main class="container">
+        <div class="tema-content">
+            <div class="video-container">
+                <iframe id="videoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="faqs-section">
+                <h2 id="faqsTitle">Preguntas Frecuentes</h2>
+                <div id="faqsContainer">
+                    <!-- Las FAQs se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ANA Seguros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Orden de temas para navegación
+        const ordenTemas = [
+            'acepta-terminos',
+            'prepara-documentos',
+            'sube-factura', 
+            'sube-id',
+            'sube-curp',
+            'sube-volante',
+            'sube-csf-domicilio',
+            'acta-constitutiva',
+            'siniestro-cancelado',
+            'siniestro-devuelto',
+            'siniestro-aprobado',
+            'como-cobrar-pago'
+        ];
+
+        function navegarTema(direccion) {
+            const path = window.location.pathname;
+            const match = path.match(/\/tema\/(.+)/);
+            const temaActual = match ? match[1] : null;
+            
+            if (!temaActual) return;
+            
+            const indiceActual = ordenTemas.indexOf(temaActual);
+            let nuevoIndice;
+            
+            if (direccion === 'prev') {
+                nuevoIndice = indiceActual - 1;
+            } else if (direccion === 'next') {
+                nuevoIndice = indiceActual + 1;
+            }
+            
+            // Verificar límites
+            if (nuevoIndice >= 0 && nuevoIndice < ordenTemas.length) {
+                const nuevoTema = ordenTemas[nuevoIndice];
+                window.location.href = `/tema/${nuevoTema}`;
+            }
+        }
+
+        // Actualizar estado de botones según el tema actual
+        document.addEventListener('DOMContentLoaded', function() {
+            const path = window.location.pathname;
+            const match = path.match(/\/tema\/(.+)/);
+            const temaActual = match ? match[1] : null;
+            
+            if (!temaActual) return;
+            
+            const indiceActual = ordenTemas.indexOf(temaActual);
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            // Deshabilitar botón anterior si es el primer tema
+            if (indiceActual === 0) {
+                prevBtn.disabled = true;
+                prevBtn.style.opacity = '0.5';
+            }
+            
+            // Deshabilitar botón siguiente si es el último tema
+            if (indiceActual === ordenTemas.length - 1) {
+                nextBtn.disabled = true;
+                nextBtn.style.opacity = '0.5';
+            }
+        });
+
+        // Cargar contenido específico del tema
+        async function cargarContenidoTema() {
+            const path = window.location.pathname;
+            const match = path.match(/\/tema\/(.+)/);
+            const temaId = match ? match[1] : null;
+            
+            if (!temaId) return;
+            
+            try {
+                const response = await fetch(`/api/tema/${temaId}`);
+                if (response.ok) {
+                    const tema = await response.json();
+                    
+                    // Actualizar video
+                    const videoFrame = document.getElementById('videoFrame');
+                    if (videoFrame && tema.video_url) {
+                        videoFrame.src = tema.video_url;
+                    }
+                    
+                    // Actualizar título de FAQs
+                    const faqsTitle = document.getElementById('faqsTitle');
+                    if (faqsTitle && tema.titulo) {
+                        faqsTitle.textContent = `PREGUNTAS FRECUENTES ${tema.titulo.toUpperCase()}`;
+                    }
+                    
+                    // Renderizar FAQs
+                    const container = document.getElementById('faqsContainer');
+                    if (container && tema.faqs) {
+                        container.innerHTML = '';
+                        tema.faqs.forEach(faq => {
+                            const faqItem = document.createElement('div');
+                            faqItem.className = 'faq-item';
+                            
+                            // Formatear la respuesta para bullets y saltos de línea
+                            let respuestaFormateada = faq.respuesta
+                                .replace(/\n/g, '<br>')  // Convertir saltos de línea a <br>
+                                .replace(/• /g, '<br>• ')  // Agregar <br> antes de cada bullet
+                                .replace(/^<br>/, '');  // Remover <br> del inicio
+                            
+                            faqItem.innerHTML = `
+                                <div class="faq-pregunta">${faq.pregunta}</div>
+                                <div class="faq-respuesta">${respuestaFormateada}</div>
+                            `;
+                            container.appendChild(faqItem);
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error('Error al cargar tema:', error);
+            }
+        }
+
+        // Cargar contenido cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', cargarContenidoTema);
+
+        // Funcionalidad de acordeón para FAQs
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('faq-pregunta')) {
+                const faqItem = e.target.parentElement;
+                const respuesta = faqItem.querySelector('.faq-respuesta');
+                const pregunta = e.target;
+                
+                // Cerrar todas las otras FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.querySelector('.faq-respuesta').classList.remove('active');
+                        item.querySelector('.faq-pregunta').classList.remove('active');
+                    }
+                });
+                
+                // Toggle la FAQ actual
+                respuesta.classList.toggle('active');
+                pregunta.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>

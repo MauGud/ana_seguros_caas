@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Centro de Ayuda</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        .test-link { display: block; margin: 10px 0; padding: 10px; background: #f0f0f0; text-decoration: none; color: #333; border-radius: 5px; }
+        .test-link:hover { background: #e0e0e0; }
+        .api-test { background: #f9f9f9; padding: 10px; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Debug del Centro de Ayuda Ana Seguros</h1>
+    
+    <div class="debug-section">
+        <h2>1. Verificar API</h2>
+        <div class="api-test">
+            <p><strong>API Temas:</strong> <a href="http://localhost:3000/api/temas" target="_blank">http://localhost:3000/api/temas</a></p>
+            <p><strong>API Tema específico:</strong> <a href="http://localhost:3000/api/tema/siniestro-cancelado" target="_blank">http://localhost:3000/api/tema/siniestro-cancelado</a></p>
+        </div>
+    </div>
+
+    <div class="debug-section">
+        <h2>2. Páginas de Prueba</h2>
+        <p><strong>Página Principal:</strong> <a href="http://localhost:3000" class="test-link" target="_blank">🏠 Página Principal</a></p>
+        
+        <h3>Proceso Principal:</h3>
+        <a href="http://localhost:3000/tema/acepta-terminos" class="test-link" target="_blank">📋 Acepta términos y condiciones</a>
+        <a href="http://localhost:3000/tema/sube-factura" class="test-link" target="_blank">📄 Sube tu factura o tarjeta de circulación</a>
+        
+        <h3>Status de Pago (Versión Normal):</h3>
+        <a href="http://localhost:3000/tema/siniestro-cancelado" class="test-link" target="_blank">❌ Siniestro cancelado</a>
+        <a href="http://localhost:3000/tema/siniestro-aprobado" class="test-link" target="_blank">✅ Siniestro aprobado</a>
+        <a href="http://localhost:3000/tema/como-cobrar-pago" class="test-link" target="_blank">💳 Cómo cobrar tu pago de daños</a>
+        
+        <h3>Status de Pago (Versión Debug):</h3>
+        <a href="http://localhost:3000/debug-tema/siniestro-cancelado" class="test-link" target="_blank">🔧 Debug: Siniestro cancelado</a>
+        <a href="http://localhost:3000/debug-tema/siniestro-aprobado" class="test-link" target="_blank">🔧 Debug: Siniestro aprobado</a>
+        <a href="http://localhost:3000/debug-tema/como-cobrar-pago" class="test-link" target="_blank">🔧 Debug: Cómo cobrar tu pago de daños</a>
+    </div>
+
+    <div class="debug-section">
+        <h2>3. Instrucciones de Debug</h2>
+        <ol>
+            <li><strong>Abrir herramientas de desarrollador</strong> (F12)</li>
+            <li><strong>Ir a la pestaña Console</strong></li>
+            <li><strong>Hacer clic en cualquier enlace de tema</strong></li>
+            <li><strong>Verificar en la consola:</strong>
+                <ul>
+                    <li>Mensaje "Inicializando TemaPage..."</li>
+                    <li>Mensaje "Cargando tema con ID: [id-del-tema]"</li>
+                    <li>Mensaje "Respuesta del servidor: 200"</li>
+                    <li>Mensaje "Tema cargado: [objeto-tema]"</li>
+                    <li>Mensaje "Renderizando tema: [objeto-tema]"</li>
+                    <li>Mensaje "FAQs renderizadas correctamente"</li>
+                </ul>
+            </li>
+            <li><strong>Verificar visualmente:</strong>
+                <ul>
+                    <li>Título del tema en rojo</li>
+                    <li>Video de YouTube embebido</li>
+                    <li>Sección de FAQs con preguntas clicables</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="debug-section">
+        <h2>4. Problemas Comunes</h2>
+        <ul>
+            <li><strong>Si no se ve el video:</strong> Verificar que el iframe tenga src="https://www.youtube.com/embed/..."</li>
+            <li><strong>Si no se ven las FAQs:</strong> Verificar que el contenedor #faqsContainer tenga contenido</li>
+            <li><strong>Si hay errores en consola:</strong> Revisar la red (Network tab) para ver si la API responde</li>
+        </ul>
+    </div>
+</body>
+</html>
