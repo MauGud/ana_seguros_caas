@@ -58,7 +58,7 @@ const temas = {
   "prepara-documentos": {
     "id": "prepara-documentos",
     "titulo": "Prepara tus documentos",
-    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "video_url": "https://www.loom.com/embed/143b209069d0483597bacb8e8dc854a3?sid=1ac291a0-6a9a-4f18-8728-702cc5ed3e72",
     "faqs": [
       {
         "pregunta": "¿Qué documentos necesito?",
@@ -79,6 +79,18 @@ const temas = {
       {
         "pregunta": "¿Qué tipo de documentos acepta la plataforma?",
         "respuesta": "Puedes subirlos en formato de imagen (JPG, JPEG, PNG) o en PDF."
+      },
+      {
+        "pregunta": "¿Puedo enviar mis documentos de otra manera?",
+        "respuesta": "No, este proceso nos ayuda a darte una atención más rápida. Si necesitas ayuda, puedes escribirnos soluciones@anaseguros.com.mx"
+      },
+      {
+        "pregunta": "¿Por qué se tarda tanto en cargar mis documentos o marca error?",
+        "respuesta": "Hay algunos factores que pueden afectar tu experencia. Si un documento no termina de cargarse estas son unas recomendaciones:\n\n• Verifica la conexión de tu internet\n• Asegúrate que tu archivo no pese más que 5MB\n• Refresca la página y vuelve a cargar\n• Si no puedes continuar, contáctanos en soluciones@anaseguros.com.mx"
+      },
+      {
+        "pregunta": "No me llegó ningún correo con el número de atención ¿Qué puedo hacer?",
+        "respuesta": "Escríbenos un correo a soluciones@anaseguros.com.mx con tu número de atención y siniestro para revisar tu caso."
       }
     ]
   },

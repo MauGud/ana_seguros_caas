@@ -65,7 +65,18 @@ class CentroAyuda {
     crearCardTema(tema) {
         const card = document.createElement('div');
         card.className = 'tema-card';
-        card.onclick = () => this.navegarATema(tema.id);
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `Ver tema: ${tema.titulo}`);
+        
+        // Manejo de eventos táctiles y de teclado
+        card.addEventListener('click', () => this.navegarATema(tema.id));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.navegarATema(tema.id);
+            }
+        });
 
         // Iconos específicos para cada tema
         const iconos = {
@@ -75,7 +86,8 @@ class CentroAyuda {
             'sube-id': '🆔',
             'sube-curp': '📋',
             'sube-volante': '💰',
-            'sube-csf-domicilio': '🏠',
+            'sube-csf': '📊',
+            'sube-domicilio-caratula': '🏠',
             'acta-constitutiva': '📜',
             'siniestro-cancelado': '❌',
             'siniestro-devuelto': '↩️',
@@ -86,7 +98,7 @@ class CentroAyuda {
         const icono = iconos[tema.id] || '📝';
 
         card.innerHTML = `
-            <div class="icono">${icono}</div>
+            <div class="icono" aria-hidden="true">${icono}</div>
             <h3>${tema.titulo}</h3>
             <p>Haz clic para ver el video tutorial y preguntas frecuentes</p>
         `;
@@ -119,6 +131,30 @@ class CentroAyuda {
             `;
         }
     }
+}
+
+// Detectar dispositivo y aplicar optimizaciones específicas
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+const isAndroid = /Android/.test(navigator.userAgent);
+
+if (isIOS) {
+    document.body.classList.add('ios-device');
+    
+    // Mejorar scroll en iOS
+    document.addEventListener('touchmove', function(e) {
+        if (e.target.closest('.temas-grid')) {
+            e.stopPropagation();
+        }
+    }, { passive: true });
+}
+
+if (isAndroid) {
+    document.body.classList.add('android-device');
+    
+    // Mejorar rendimiento en Android
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.style.transform = 'translateZ(0)';
+    });
 }
 
 // Inicializar la aplicación cuando el DOM esté listo

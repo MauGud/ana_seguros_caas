@@ -2,16 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#C2002F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ANA Centro Ayuda">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-TileColor" content="#C2002F">
+    <meta name="msapplication-tap-highlight" content="no">
     <title>Centro de Ayuda ANA Pronto Pago - Ana Seguros</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css?v=4">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/logopng.png">
 </head>
 <body>
     <!-- Logo superior izquierdo -->
     <div class="logo-top-left">
         <a href="/">
-            <img src="/images/logopng.png" alt="ANA SEGUROS" class="logo">
+            <div class="logo" role="img" aria-label="ANA SEGUROS"></div>
         </a>
     </div>
     
@@ -68,7 +78,8 @@
             'sube-id',
             'sube-curp',
             'sube-volante',
-            'sube-csf-domicilio',
+            'sube-csf',
+            'sube-domicilio-caratula',
             'acta-constitutiva',
             'siniestro-cancelado',
             'siniestro-devuelto',
@@ -95,9 +106,57 @@
             // Verificar límites
             if (nuevoIndice >= 0 && nuevoIndice < ordenTemas.length) {
                 const nuevoTema = ordenTemas[nuevoIndice];
-                window.location.href = `/tema/${nuevoTema}`;
+                // Agregar efecto de transición suave
+                document.body.style.opacity = '0.8';
+                setTimeout(() => {
+                    window.location.href = `/tema/${nuevoTema}`;
+                }, 150);
             }
         }
+
+        // Navegación por gestos optimizada para iOS y Android
+        let startX = 0;
+        let startY = 0;
+        let startTime = 0;
+        
+        document.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            startTime = Date.now();
+        }, { passive: true });
+        
+        document.addEventListener('touchend', function(e) {
+            if (!startX || !startY) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            const endTime = Date.now();
+            
+            const diffX = startX - endX;
+            const diffY = startY - endY;
+            const diffTime = endTime - startTime;
+            
+            // Solo procesar si el swipe es horizontal, suficientemente largo y rápido
+            if (Math.abs(diffX) > Math.abs(diffY) && 
+                Math.abs(diffX) > 50 && 
+                diffTime < 500) {
+                
+                // Prevenir comportamiento por defecto
+                e.preventDefault();
+                
+                if (diffX > 0) {
+                    // Swipe izquierda - siguiente tema
+                    navegarTema('next');
+                } else {
+                    // Swipe derecha - tema anterior
+                    navegarTema('prev');
+                }
+            }
+            
+            startX = 0;
+            startY = 0;
+            startTime = 0;
+        }, { passive: false });
 
         // Actualizar estado de botones según el tema actual
         document.addEventListener('DOMContentLoaded', function() {
@@ -146,14 +205,28 @@
                     // Actualizar título de FAQs
                     const faqsTitle = document.getElementById('faqsTitle');
                     if (faqsTitle && tema.titulo) {
-                        faqsTitle.textContent = `PREGUNTAS FRECUENTES ${tema.titulo.toUpperCase()}`;
+                        if (tema.id === 'siniestro-devuelto') {
+                            faqsTitle.textContent = 'MOTIVOS DE UN EXPEDIENTE DEVUELTO POR DOCUMENTO';
+                        } else {
+                            faqsTitle.textContent = `PREGUNTAS FRECUENTES ${tema.titulo.toUpperCase()}`;
+                        }
+                    }
+                    
+                    // Mostrar leyenda si existe
+                    const faqsSection = document.querySelector('.faqs-section');
+                    if (faqsSection && tema.leyenda) {
+                        const leyendaDiv = document.createElement('div');
+                        leyendaDiv.className = 'leyenda-section';
+                        leyendaDiv.style.cssText = 'background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; color: #856404;';
+                        leyendaDiv.innerHTML = `<strong>📢 Importante:</strong> ${tema.leyenda}`;
+                        faqsSection.insertBefore(leyendaDiv, faqsTitle);
                     }
                     
                     // Renderizar FAQs
                     const container = document.getElementById('faqsContainer');
                     if (container && tema.faqs) {
                         container.innerHTML = '';
-                        tema.faqs.forEach(faq => {
+                        tema.faqs.forEach((faq, index) => {
                             const faqItem = document.createElement('div');
                             faqItem.className = 'faq-item';
                             
@@ -163,9 +236,20 @@
                                 .replace(/• /g, '<br>• ')  // Agregar <br> antes de cada bullet
                                 .replace(/^<br>/, '');  // Remover <br> del inicio
                             
+                            const preguntaId = `faq-pregunta-${index}`;
+                            const respuestaId = `faq-respuesta-${index}`;
+                            
                             faqItem.innerHTML = `
-                                <div class="faq-pregunta">${faq.pregunta}</div>
-                                <div class="faq-respuesta">${respuestaFormateada}</div>
+                                <div class="faq-pregunta" 
+                                     id="${preguntaId}"
+                                     role="button" 
+                                     tabindex="0"
+                                     aria-expanded="false"
+                                     aria-controls="${respuestaId}">${faq.pregunta}</div>
+                                <div class="faq-respuesta" 
+                                     id="${respuestaId}"
+                                     role="region"
+                                     aria-labelledby="${preguntaId}">${respuestaFormateada}</div>
                             `;
                             container.appendChild(faqItem);
                         });
@@ -179,7 +263,7 @@
         // Cargar contenido cuando la página esté lista
         document.addEventListener('DOMContentLoaded', cargarContenidoTema);
 
-        // Funcionalidad de acordeón para FAQs
+        // Funcionalidad de acordeón para FAQs con mejor accesibilidad
         document.addEventListener('click', function(e) {
             if (e.target.classList.contains('faq-pregunta')) {
                 const faqItem = e.target.parentElement;
@@ -191,14 +275,72 @@
                     if (item !== faqItem) {
                         item.querySelector('.faq-respuesta').classList.remove('active');
                         item.querySelector('.faq-pregunta').classList.remove('active');
+                        item.querySelector('.faq-pregunta').setAttribute('aria-expanded', 'false');
                     }
                 });
                 
                 // Toggle la FAQ actual
+                const isActive = respuesta.classList.contains('active');
                 respuesta.classList.toggle('active');
                 pregunta.classList.toggle('active');
+                pregunta.setAttribute('aria-expanded', !isActive);
             }
         });
+
+        // Mejorar accesibilidad de FAQs
+        document.addEventListener('keydown', function(e) {
+            if (e.target.classList.contains('faq-pregunta') && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault();
+                e.target.click();
+            }
+        });
+
+        // Detectar dispositivo y aplicar optimizaciones específicas
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const isAndroid = /Android/.test(navigator.userAgent);
+        
+        if (isIOS) {
+            // Optimizaciones específicas para iOS
+            document.body.classList.add('ios-device');
+            
+            // Prevenir zoom en inputs en iOS
+            document.addEventListener('touchstart', function(e) {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                    e.target.style.fontSize = '16px';
+                }
+            });
+            
+            // Mejorar scroll en iOS
+            document.addEventListener('touchmove', function(e) {
+                if (e.target.closest('.faqs-section') || e.target.closest('.temas-grid')) {
+                    e.stopPropagation();
+                }
+            }, { passive: true });
+        }
+        
+        if (isAndroid) {
+            // Optimizaciones específicas para Android
+            document.body.classList.add('android-device');
+            
+            // Mejorar rendimiento en Android
+            document.addEventListener('DOMContentLoaded', function() {
+                // Forzar repaint para mejor renderizado
+                document.body.style.transform = 'translateZ(0)';
+            });
+        }
+
+        // Registrar Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registrado exitosamente:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Error al registrar ServiceWorker:', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html>

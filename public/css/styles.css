@@ -1,8 +1,14 @@
-/* Reset y configuración base */
+/* Reset y configuración base - VERSIÓN 2 - LOGO ARREGLADO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -10,6 +16,15 @@ body {
   background-color: #F5F5F5;
   color: #333;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Mejoras específicas para iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Mejoras específicas para Android */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Variables CSS para colores institucionales */
@@ -21,6 +36,24 @@ body {
   --color-blanco: #FFFFFF;
   --color-texto: #333333;
   --color-texto-claro: #666666;
+  
+  /* Variables para responsive design */
+  --logo-size-desktop: 120px;
+  --logo-size-tablet: 100px;
+  --logo-size-mobile: 80px;
+  --logo-size-small: 70px;
+  
+  /* Variables para espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Variables para breakpoints */
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 768px;
+  --breakpoint-small: 480px;
 }
 
 /* Header principal */
@@ -110,12 +143,23 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.tema-card:hover {
+.tema-card:hover,
+.tema-card:active,
+.tema-card:focus {
   border-color: var(--color-primario);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(194, 0, 47, 0.15);
+  outline: none;
+}
+
+.tema-card:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 8px rgba(194, 0, 47, 0.2);
 }
 
 .tema-card .icono {
@@ -155,12 +199,24 @@ body {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  min-height: 44px;
+  min-width: 44px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #A00026;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(194, 0, 47, 0.3);
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 4px rgba(194, 0, 47, 0.4);
 }
 
 .btn-secondary {
@@ -321,93 +377,246 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .temas-grid {
-    gap: 2rem;
+@media (max-width: 1024px) {
+  .logo {
+    width: 100px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
   }
   
-  .temas-grid-seccion {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .tema-card {
-    padding: 1.5rem;
-    min-height: 150px;
-  }
-  
-  .tema-card h3 {
-    font-size: 1.1rem;
-  }
-  
-  .titulo-seccion {
-    font-size: 1.5rem;
-  }
-  
-  .header h1 {
-    font-size: 2rem;
-  }
-  
-  .tema-header h1 {
-    font-size: 1.8rem;
-  }
-  
-  .video-container iframe {
-    height: 250px;
-  }
-  
-  .container {
-    padding: 1rem;
-  }
-  
-  .tema-content {
-    padding: 1rem;
-  }
-  
-  /* Navegación responsive */
-  .nav-buttons {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-  
-  .navigation-controls {
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .navigation-controls .btn {
-    flex: 1;
-    min-width: auto;
+  .logo-top-left {
+    top: 15px;
+    left: 15px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  /* Header optimizado para móvil */
+  .header {
+    padding: 1rem 0;
+    padding-left: 100px; /* Espacio para el logo */
+  }
+  
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
   }
   
-  .tema-header h1 {
-    font-size: 1.5rem;
-  }
-  
-  .tema-card .icono {
-    font-size: 2.5rem;
-  }
-  
-  .btn {
-    padding: 10px 20px;
+  .header p {
     font-size: 0.9rem;
+    padding: 0 0.5rem;
+    margin-top: 0.3rem;
   }
   
-  /* Logo más pequeño en móviles */
+  /* Logo para tablets */
   .logo {
     width: 80px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
   }
   
   .logo-top-left {
     top: 10px;
     left: 10px;
+  }
+  
+  /* Contenido principal */
+  .temas-grid {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .temas-grid-seccion {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .tema-card {
+    padding: 1rem;
+    min-height: 120px;
+    margin: 0.3rem 0;
+  }
+  
+  .tema-card h3 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+  
+  .tema-card p {
+    font-size: 0.8rem;
+  }
+  
+  .tema-card .icono {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .titulo-seccion {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .video-container iframe {
+    height: 200px;
+  }
+  
+  .container {
+    padding: 0.8rem;
+  }
+  
+  .tema-content {
+    padding: 0.5rem;
+  }
+  
+  /* Navegación responsive */
+  .nav-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: stretch;
+    margin-bottom: 1rem;
+  }
+  
+  .navigation-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  .navigation-controls .btn {
+    flex: 1;
+    min-width: auto;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .breadcrumb {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header ultra compacto para móviles pequeños */
+  .header {
+    padding: 0.8rem 0;
+    padding-left: 80px; /* Espacio para el logo */
+  }
+  
+  .header h1 {
+    font-size: 1.2rem;
+    padding: 0 0.3rem;
+    margin-top: 0.3rem;
+    line-height: 1.2;
+  }
+  
+  .header p {
+    font-size: 0.8rem;
+    padding: 0 0.3rem;
+    margin-top: 0.2rem;
+  }
+  
+  /* Logo más pequeño en móviles */
+  .logo {
+    width: 70px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  
+  .logo-top-left {
+    top: 8px;
+    left: 8px;
+  }
+  
+  /* Contenido ultra compacto */
+  .temas-grid {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .temas-grid-seccion {
+    gap: 0.6rem;
+  }
+  
+  .tema-card {
+    padding: 0.8rem;
+    min-height: 100px;
+    margin: 0.2rem 0;
+  }
+  
+  .tema-card h3 {
+    font-size: 0.85rem;
+    line-height: 1.1;
+  }
+  
+  .tema-card p {
+    font-size: 0.75rem;
+  }
+  
+  .tema-card .icono {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .titulo-seccion {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-height: 36px;
+  }
+  
+  .video-container iframe {
+    height: 160px;
+  }
+  
+  .faqs-section {
+    padding: 0.8rem;
+  }
+  
+  .faq-item {
+    padding: 0.8rem 0;
+  }
+  
+  .faq-pregunta {
+    font-size: 0.9rem;
+  }
+  
+  .faq-respuesta {
+    font-size: 0.8rem;
+  }
+  
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+/* Breakpoint para móviles muy pequeños */
+@media (max-width: 360px) {
+  .header {
+    padding-left: 70px; /* Espacio para el logo */
+  }
+  
+  .logo {
+    width: 60px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  
+  .logo-top-left {
+    top: 5px;
+    left: 5px;
   }
 }
 
@@ -467,7 +676,11 @@ body {
 
 .logo {
   width: 120px;
-  height: auto;
+  height: 48px;
+  background-image: url('/images/logopng.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
   opacity: 0.9;
   transition: opacity 0.3s ease;
 }
@@ -481,11 +694,157 @@ body {
   position: relative;
 }
 
+/* Web App específico */
+@media (display-mode: standalone) {
+  .header {
+    padding-top: 2.5rem;
+  }
+  
+  .logo-top-left {
+    top: 25px;
+  }
+}
+
+/* Mejoras para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .tema-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .tema-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(194, 0, 47, 0.2);
+  }
+  
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(194, 0, 47, 0.4);
+  }
+}
+
+/* Safe area para dispositivos con notch */
+@supports (padding: max(0px)) {
+  .header {
+    padding-top: max(2rem, env(safe-area-inset-top));
+  }
+  
+  .container {
+    padding-left: max(2rem, env(safe-area-inset-left));
+    padding-right: max(2rem, env(safe-area-inset-right));
+  }
+  
+  .footer {
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  }
+  
+  .logo-top-left {
+    top: max(20px, env(safe-area-inset-top) + 5px);
+    left: max(20px, env(safe-area-inset-left) + 5px);
+  }
+}
+
+/* Estilos específicos para iOS */
+@supports (-webkit-touch-callout: none) {
+  .tema-card {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .btn {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Mejorar scroll en iOS */
+  .temas-grid {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .faqs-section {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Estilos específicos para Android */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .tema-card {
+    will-change: transform;
+  }
+  
+  .btn {
+    will-change: transform;
+  }
+  
+  /* Mejorar renderizado en Android */
+  .header {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Estilos específicos por clase de dispositivo */
+.ios-device {
+  /* Optimizaciones específicas para iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-device .tema-card {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.ios-device .btn {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.android-device {
+  /* Optimizaciones específicas para Android */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.android-device .tema-card {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.android-device .btn {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 /* Utilidades */
 .text-center { text-align: center; }
-.mt-1 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 1rem; }
-.mt-3 { margin-top: 1.5rem; }
-.mb-1 { margin-bottom: 0.5rem; }
-.mb-2 { margin-bottom: 1rem; }
-.mb-3 { margin-bottom: 1.5rem; }
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+
+/* Clases de utilidad adicionales */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus-visible:focus {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 2px;
+}
