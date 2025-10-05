@@ -1,4 +1,232 @@
 /* Reset y configuración base - VERSIÓN 2 - LOGO ARREGLADO */
+
+/* ===== FOOTER ANA SEGUROS ===== */
+.footer-ana {
+  margin-top: 2rem;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  display: block;
+}
+
+/* Franja roja con dirección y redes */
+.footer-red {
+  background-color: #C2002F;
+  color: white;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 50px;
+}
+
+.footer-address {
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+  min-width: 400px;
+  font-weight: 400;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-text {
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.footer-social-icon {
+  color: #C2002F;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.footer-social-icon svg {
+  color: #C2002F;
+  width: 10px;
+  height: 10px;
+}
+
+.footer-social-icon:hover {
+  opacity: 0.8;
+}
+
+/* Franja gris con slogan y logos */
+.footer-gray {
+  background: linear-gradient(to bottom, #F8F8F8, #F0F0F0);
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 80px;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-slogan {
+  flex: 1;
+  text-align: left;
+  min-width: 400px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-slogan-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #C2002F;
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.footer-globe-icon {
+  color: #666;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 12px;
+}
+
+.footer-link:hover {
+  color: #C2002F;
+}
+
+.footer-separator {
+  color: #666;
+  margin: 0 4px;
+  font-weight: normal;
+}
+
+.footer-institutional {
+  display: flex;
+  gap: 30px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-institutional-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer-institutional-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Copyright */
+.footer-copyright {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 10px;
+  font-weight: 400;
+  width: 100%;
+}
+
+/* Responsive Design para Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-address {
+    min-width: auto;
+  }
+  
+  .footer-social {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .footer-slogan {
+    min-width: auto;
+  }
+  
+  .footer-institutional {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -847,4 +1075,343 @@ body {
 .focus-visible:focus {
   outline: 2px solid var(--color-primario);
   outline-offset: 2px;
+}
+
+/* ===== FOOTER ANA SEGUROS ===== */
+.footer-ana {
+  margin-top: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Franja roja con dirección y redes */
+.footer-red {
+  background-color: #C2002F;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
+
+.footer-address {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .footer-address {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-address {
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .footer-social {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}
+
+.footer-social-text {
+  font-size: 0.75rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .footer-social-text {
+    font-size: 0.875rem;
+  }
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .footer-social-icons {
+    gap: 0.5rem;
+  }
+}
+
+.footer-social-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .footer-social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.footer-social-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Franja gris con slogan y logos */
+.footer-gray {
+  background: linear-gradient(to bottom, white, #e5e7eb);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.footer-logo {
+  order: 1;
+  flex-shrink: 0;
+}
+
+.footer-logo-img {
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .footer-logo-img {
+    width: 120px;
+    height: 48px;
+  }
+}
+
+.footer-slogan {
+  order: 2;
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .footer-slogan {
+    text-align: left;
+  }
+}
+
+.footer-slogan-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #C2002F;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .footer-slogan-text {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-slogan-text {
+    font-size: 2.25rem;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .footer-links {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.footer-globe-icon {
+  color: #C2002F;
+  flex-shrink: 0;
+}
+
+.footer-link {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  word-break: break-all;
+}
+
+@media (min-width: 640px) {
+  .footer-link {
+    word-break: normal;
+  }
+}
+
+.footer-link:hover {
+  color: #C2002F;
+}
+
+.footer-separator {
+  color: #C2002F;
+  margin: 0 0.25rem;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .footer-separator {
+    display: inline;
+  }
+}
+
+.footer-institutional {
+  order: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .footer-institutional {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-institutional {
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+}
+
+.footer-institutional-link {
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-institutional-link:hover {
+  opacity: 0.8;
+}
+
+.footer-institutional-img {
+  max-height: 2rem;
+  width: auto;
+  height: auto;
+}
+
+@media (min-width: 640px) {
+  .footer-institutional-img {
+    max-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-institutional-img {
+    max-height: 3rem;
+  }
+}
+
+/* Copyright */
+.footer-copyright {
+  background-color: white;
+  color: #6b7280;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .footer-copyright {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Optimizaciones para web app */
+@media (display-mode: standalone) {
+  .footer-ana {
+    margin-top: 1rem;
+  }
+}
+
+/* Optimizaciones para móvil */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0.75rem;
+  }
+  
+  .footer-social-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .footer-social-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .footer-slogan-text {
+    font-size: 1.25rem;
+  }
+  
+  .footer-links {
+    font-size: 0.6875rem;
+  }
+  
+  .footer-institutional-img {
+    max-height: 1.5rem;
+  }
 }

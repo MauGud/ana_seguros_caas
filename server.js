@@ -96,7 +96,7 @@ const temas = {
   },
   "sube-factura": {
     "id": "sube-factura",
-    "titulo": "Sube tu factura o tarjeta de circulación",
+    "titulo": "Sube tus documentos vehiculares",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
@@ -189,7 +189,7 @@ const temas = {
   },
   "sube-volante": {
     "id": "sube-volante",
-    "titulo": "Sube volante de pago",
+    "titulo": "Sube tu volante de pronto pago",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
@@ -208,7 +208,7 @@ const temas = {
   },
   "sube-csf-domicilio": {
     "id": "sube-csf-domicilio",
-    "titulo": "Sube CSF / domicilio / carátula de cuenta",
+    "titulo": "Sube tu Constancia de Situación Fiscal",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
@@ -229,9 +229,24 @@ const temas = {
       }
     ]
   },
+  "sube-estado-cuenta": {
+    "id": "sube-estado-cuenta",
+    "titulo": "Sube tu estado de cuenta bancario y comprobante de domicilio",
+    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "faqs": [
+      {
+        "pregunta": "¿Qué comprobante de domicilio puedo usar?",
+        "respuesta": "Puedes usar recibos de luz, agua, teléfono, predial o estados de cuenta bancarios que no sean mayores a 3 meses."
+      },
+      {
+        "pregunta": "¿Cómo puedo obtener la carátula de mi estado de cuenta bancario?",
+        "respuesta": "Ingresa a la app de tu banco, busca tu estado de cuenta, descárgalo o toma una captura de pantalla de la primera hoja y súbela al portal de ANA Pronto Pago."
+      }
+    ]
+  },
   "acta-constitutiva": {
     "id": "acta-constitutiva",
-    "titulo": "Acta constitutiva o poder notarial",
+    "titulo": "Sube el acta constitutiva y/o poder notarial (solo personas morales)",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
@@ -319,12 +334,126 @@ const temas = {
         "respuesta": "Solo necesitas presentar una identificación oficial y comprobante de cuenta bancaria."
       }
     ]
+  },
+  "siniestro-cancelado": {
+    "id": "siniestro-cancelado",
+    "titulo": "Siniestro cancelado",
+    "categoria": "status-pago",
+    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "faqs": [
+      {
+        "pregunta": "¿Qué significa que mi siniestro esté cancelado?",
+        "respuesta": "Significa que tu siniestro fue cancelado por alguna razón específica que se explica en el video."
+      },
+      {
+        "pregunta": "¿Puedo reactivar mi siniestro cancelado?",
+        "respuesta": "Depende del motivo de la cancelación. Contáctanos para más información."
+      }
+    ]
+  },
+  "siniestro-devuelto": {
+    "id": "siniestro-devuelto",
+    "titulo": "Siniestro devuelto",
+    "categoria": "status-pago",
+    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "faqs": [
+      {
+        "pregunta": "¿Por qué se devuelve mi siniestro?",
+        "respuesta": "Tu siniestro se devuelve cuando falta información o documentos requeridos."
+      },
+      {
+        "pregunta": "¿Qué hago si mi siniestro fue devuelto?",
+        "respuesta": "Revisa la información que te solicitamos y vuelve a enviar los documentos que faltan."
+      }
+    ]
+  },
+  "siniestro-aprobado": {
+    "id": "siniestro-aprobado",
+    "titulo": "Siniestro aprobado",
+    "categoria": "status-pago",
+    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "faqs": [
+      {
+        "pregunta": "¿Cuánto tiempo tarda mi proceso de aprobación?",
+        "respuesta": "Tu proceso de aprobación puede tardar entre 5 a 10 días hábiles."
+      },
+      {
+        "pregunta": "¿Qué sigue después de que me aprueben mi siniestro?",
+        "respuesta": "Una vez que te aprueben tu siniestro, procederemos con el pago según el método que hayas elegido."
+      }
+    ]
+  },
+  "pago-autorizado": {
+    "id": "pago-autorizado",
+    "titulo": "Pago Autorizado",
+    "categoria": "status-pago",
+    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "faqs": [
+      {
+        "pregunta": "¿Qué significa que mi pago esté autorizado?",
+        "respuesta": "Significa que tu pago ha sido aprobado y está listo para ser procesado. El dinero se transferirá según el método que hayas elegido."
+      },
+      {
+        "pregunta": "¿Cuánto tiempo tarda en llegar mi pago?",
+        "respuesta": "Una vez autorizado, tu pago se procesa en 24-48 horas hábiles y debería llegar a tu cuenta o método de pago elegido."
+      },
+      {
+        "pregunta": "¿Qué hago si no recibo mi pago en el tiempo esperado?",
+        "respuesta": "Si no recibes tu pago en el tiempo indicado, contáctanos inmediatamente para revisar el estado de tu transferencia."
+      }
+    ]
+  },
+  "como-cobrar-pago": {
+    "id": "como-cobrar-pago",
+    "titulo": "Cómo cobrar tu pago de daños",
+    "categoria": "status-pago",
+    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "faqs": [
+      {
+        "pregunta": "¿Cuáles son los métodos de pago que puedo usar?",
+        "respuesta": "Puedes elegir entre transferencia bancaria, cheque o depósito directo a tu cuenta."
+      },
+      {
+        "pregunta": "¿Cuánto tiempo tarda mi pago?",
+        "respuesta": "Una vez que te aprueben tu siniestro, tu pago se procesa en 24-48 horas hábiles."
+      },
+      {
+        "pregunta": "¿Qué documentos necesito para cobrar mi pago?",
+        "respuesta": "Solo necesitas presentar una identificación oficial y comprobante de cuenta bancaria."
+      }
+    ]
   }
 };
 
 // Rutas API
 app.get('/api/temas', (req, res) => {
-  res.json(Object.values(temas));
+  // Separar temas por categoría
+  const temasProceso = [
+    'prepara-documentos',
+    'acepta-terminos', 
+    'sube-id',
+    'sube-factura',
+    'sube-volante',
+    'sube-csf-domicilio',
+    'sube-estado-cuenta',
+    'sube-curp',
+    'acta-constitutiva'
+  ];
+  
+  const temasStatus = [
+    'siniestro-cancelado',
+    'siniestro-devuelto',
+    'siniestro-aprobado',
+    'pago-autorizado',
+    'como-cobrar-pago'
+  ];
+  
+  const todosLosTemas = [
+    ...temasProceso.map(id => temas[id]).filter(tema => tema),
+    ...temasStatus.map(id => temas[id]).filter(tema => tema)
+  ];
+  
+  res.json(todosLosTemas);
 });
 
 app.get('/api/tema/:id', (req, res) => {
