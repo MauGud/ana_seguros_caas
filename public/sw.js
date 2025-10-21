@@ -1,5 +1,5 @@
 // Service Worker para Centro de Ayuda ANA Seguros
-const CACHE_NAME = 'ana-centro-ayuda-v1';
+const CACHE_NAME = 'ana-centro-ayuda-v2';
 const urlsToCache = [
   '/',
   '/css/styles.css',

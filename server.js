@@ -15,54 +15,62 @@ const temas = {
   "acepta-terminos": {
     "id": "acepta-terminos",
     "titulo": "Acepta términos y condiciones",
-    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "video_url": "<div style=\"position: relative; padding-bottom: 49.375%; height: 0;\"><iframe src=\"https://www.loom.com/embed/8297cbd961674466814cb014fd22fb7e?sid=87f7a5cd-f111-424a-b66f-1510712ca6c4\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>",
     "faqs": [
       {
         "pregunta": "¿Qué son los Términos y Condiciones de ANA Seguros?",
-        "respuesta": "Son las reglas que establecen cómo puedes usar las aplicaciones, servicios y medios electrónicos (teléfono, internet, computadora o celular) de ANA Seguros para gestionar tus pólizas, pagos y servicios."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Qué operaciones puedo realizar en este portal?",
-        "respuesta": "• Reportar y dar seguimiento a siniestros."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro"
       },
       {
         "pregunta": "¿Cómo me identifico como usuario?",
-        "respuesta": "Necesitas tu número de póliza y una contraseña personal. En algunos casos, se usan medidas adicionales como tokens o contraseñas dinámicas. Esto sustituye a tu firma autógrafa, es decir, tiene la misma validez legal."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Qué compromisos tengo como usuario?",
-        "respuesta": "• Usar las aplicaciones de buena fe.\n• No modificar, copiar ni dañar los sistemas.\n• No introducir virus ni programas que afecten los servicios.\n• Proporcionar siempre datos verídicos."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Qué tipo de comprobantes recibo después de hacer una operación?",
-        "respuesta": "ANA Seguros te enviará a tu correo electrónico o teléfono:\n• Carátula de póliza.\n• Recibos de pago.\n• Endosos o comprobantes de trámite."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Qué pasa si un usuario intenta dañar el sistema?",
-        "respuesta": "ANA Seguros puede tomar acciones legales (civiles o penales) y negar el acceso a las aplicaciones."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Qué son las cookies y para qué sirven?",
-        "respuesta": "Son archivos pequeños que permiten reconocer tu dispositivo y mejorar tu experiencia. No contienen virus ni programas. Puedes configurarlas en tu navegador."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Cómo protege ANA Seguros mis datos personales?",
-        "respuesta": "Con medidas de seguridad como el candado SSL. La información es tratada de forma confidencial y bajo las disposiciones de la Ley de Protección de Datos Personales en México."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       },
       {
         "pregunta": "¿Qué leyes aplican a estos Términos y Condiciones?",
-        "respuesta": "Se rigen por las leyes mexicanas. En caso de controversia, la jurisdicción es la Ciudad de México."
+        "respuesta": "Realizar el proceso de pronto pago a partir de un siniestro."
       }
     ]
   },
   "prepara-documentos": {
     "id": "prepara-documentos",
     "titulo": "Prepara tus documentos",
-    "video_url": "https://www.loom.com/embed/143b209069d0483597bacb8e8dc854a3?sid=1ac291a0-6a9a-4f18-8728-702cc5ed3e72",
+    "video_url": "<div style=\"position: relative; padding-bottom: 49.375%; height: 0;\"><iframe src=\"https://www.loom.com/embed/c504214c6e9346f68a5e91b13608fac7?sid=771bacca-6295-47c8-94bc-f925010d27a6\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>",
     "faqs": [
       {
         "pregunta": "¿Qué documentos necesito?",
-        "respuesta": "Debes tener listos:\n\n• Identificación oficial (INE por ambos lados, pasaporte o cédula profesional).\n• CURP.\n• Constancia de Situación Fiscal (CSF).\n• Comprobante de domicilio reciente (recibo de luz, agua, etc.).\n• Carátula de estado de cuenta bancario reciente.\n• Documentos vehiculares (Factura, refacturas, endosos y/o frente de la Tarjeta de Circulación).\n• Volante de pronto pago entregado por el ajustador.\n• Acta constitutiva o poder notarial (solo para personas morales)."
+        "respuesta": "Debes tener listos:\n\n• Identificación oficial (INE por ambos lados, pasaporte o cédula profesional).\n• Comprobante de domicilio reciente no mayor a tres meses (recibo de luz, agua, etc.).\n• Carátula de estado de cuenta bancario reciente no mayor a tres meses.\n• Documentos vehiculares (Factura, refacturas, endosos y/o frente de la Tarjeta de Circulación).\n• Volante de pronto pago entregado por el ajustador.\n• Acta constitutiva o poder notarial (solo para personas morales)."
+      },
+      {
+        "pregunta": "El sistema me dice que mi documento no coincide, pero estoy seguro de que es correcto. ¿Qué hago?",
+        "respuesta": "Puede tratarse de un error de lectura automática. Nuestro equipo validará tu documento de forma manual para que el proceso no se detenga."
+      },
+      {
+        "pregunta": "¿Puedo subir una foto del documento?",
+        "respuesta": "Sí. Puedes tomar una foto directa o escanear el documento y subirlo en PDF.\nEntre mejor sea la calidad, más rápido podremos darte respuesta sobre tu pago."
       },
       {
         "pregunta": "¿Son obligatorios todos los documentos?",
@@ -74,7 +82,7 @@ const temas = {
       },
       {
         "pregunta": "¿Qué pasa si no tengo todos los documentos completos?",
-        "respuesta": "Puedes subir los que ya tengas mientras reúnes el resto. Tu progreso se guarda con tu número de atención."
+        "respuesta": "Puedes subir los que ya tengas mientras reúnes el resto, tu proceso se guardará automáticamente. Tu progreso se guarda con tu número de atención."
       },
       {
         "pregunta": "¿Qué tipo de documentos acepta la plataforma?",
@@ -82,22 +90,22 @@ const temas = {
       },
       {
         "pregunta": "¿Puedo enviar mis documentos de otra manera?",
-        "respuesta": "No, este proceso nos ayuda a darte una atención más rápida. Si necesitas ayuda, puedes escribirnos soluciones@anaseguros.com.mx"
+        "respuesta": "No, este proceso nos ayuda a darte una atención más rápida. Si necesitas ayuda, puedes escribirnos gloriagr@anaseguros.com.mx"
       },
       {
         "pregunta": "¿Por qué se tarda tanto en cargar mis documentos o marca error?",
-        "respuesta": "Hay algunos factores que pueden afectar tu experencia. Si un documento no termina de cargarse estas son unas recomendaciones:\n\n• Verifica la conexión de tu internet\n• Asegúrate que tu archivo no pese más que 5MB\n• Refresca la página y vuelve a cargar\n• Si no puedes continuar, contáctanos en soluciones@anaseguros.com.mx"
+        "respuesta": "Hay algunos factores que pueden afectar tu experencia. Si un documento no termina de cargarse estas son unas recomendaciones:\n\n• Verifica la conexión de tu internet\n• Asegúrate que tu archivo no pese más que 10MB\n• Refresca la página y vuelve a cargar\n• Si no puedes continuar, contáctanos en gloriagr@anaseguros.com.mx"
       },
       {
         "pregunta": "No me llegó ningún correo con el número de atención ¿Qué puedo hacer?",
-        "respuesta": "Escríbenos un correo a soluciones@anaseguros.com.mx con tu número de atención y siniestro para revisar tu caso."
+        "respuesta": "Revisa tu volante de pago y localiza tu número de atención. <a href='/tema/sube-volante' target='_blank'>Entra a anaseguros.nexcar.com.mx</a>, e ingresa tu número de atención de tu volante de pagos para iniciar el proceso. Si tienes algún problema, escribenos un correo a gloriagr@anaseguros.com.mx con tu número de atención y siniestro para revisar tu caso."
       }
     ]
   },
   "sube-factura": {
     "id": "sube-factura",
     "titulo": "Sube tus documentos vehiculares",
-    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "video_url": "<div style=\"position: relative; padding-bottom: 49.375%; height: 0;\"><iframe src=\"https://www.loom.com/embed/a34df84accb948b5acf6e13090e6c2d5?sid=edf6c6f9-0b6a-4fec-83f0-bdff440c8443\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>",
     "faqs": [
       {
         "pregunta": "¿Qué pasa si el documento está borroso o poco legible?",
@@ -112,36 +120,56 @@ const temas = {
         "respuesta": "Puede tratarse de un error de lectura automática. Nuestro equipo validará tu documento de forma manual para que el proceso no se detenga."
       },
       {
-        "pregunta": "¿Qué pasa si no tengo todos los documentos listos para subir?",
-        "respuesta": "Puedes guardar tu avance y continuar más tarde.\nEl sistema no procesará tu caso hasta que cargues todos los documentos necesarios."
+        "pregunta": "¿Se aceptan tarjetas de circulación vencidas?",
+        "respuesta": "No. La tarjeta de circulación debe estar vigente. Si está vencida, deberás renovarla antes de continuar."
       },
       {
-        "pregunta": "¿Se aceptan tarjetas vencidas?",
-        "respuesta": "No. La tarjeta debe estar vigente. Si está vencida, deberás renovarla antes de continuar."
-      },
-      {
-        "pregunta": "¿Tengo que subir ambos lados de la tarjeta?",
-        "respuesta": "No. Solo es obligatorio el frente de la tarjeta.\nSi lo prefieres, también puedes subir un archivo con ambas caras."
+        "pregunta": "¿Tengo que subir ambos lados de la tarjeta de circulación?",
+        "respuesta": "No. Solo es obligatorio el frente de la tarjeta de circulación.\nSi lo prefieres, también puedes subir un archivo con ambas caras."
       },
       {
         "pregunta": "¿Qué pasa si tengo una reimpresión o reposición?",
-        "respuesta": "Son válidas siempre y cuando hayan sido emitidas por la autoridad de tu estado.\nAsegúrate de que el holograma o código QR se vea claramente."
+        "respuesta": "Son válidas siempre y cuando estén vigentes, y hayan sido emitidas por la autoridad de tu estado.\nAsegúrate de que el holograma o código QR se vea claramente."
       },
       {
-        "pregunta": "¿En qué formato debo subir la tarjeta?",
+        "pregunta": "¿En qué formato debo subir la tarjeta de circulación?",
         "respuesta": "Puedes usar PDF, JPG o PNG.\nEl archivo debe ser de buena calidad, mostrando todos los bordes completos y sin cortes."
       },
       {
-        "pregunta": "¿Qué hago si el sistema me rechaza la tarjeta pero está vigente?",
+        "pregunta": "¿Qué hago si el sistema me rechaza la tarjeta de circulación pero está vigente?",
         "respuesta": "Puede ser un problema de lectura. Nuestro equipo revisará el documento manualmente para confirmar que sea válido."
+      },
+      {
+        "pregunta": "¿Qué pasa si la factura o refactura no está a mi nombre y no cuento con endoso?",
+        "respuesta": "Si no cuentas con el endoso de la factura puedes subir una TDC a tu nombre y vigente. Si tampoco cuentas con ella, pide que el titular de la factura te proporcione el endoso correspondiente"
+      },
+      {
+        "pregunta": "¿Qué pasa si solo cuento con el endoso?",
+        "respuesta": "Si no cuentas con el endoso de la factura puedes subir una TDC a tu nombre y vigente. Si tampoco cuentas con ella, deberás pedir una reimpresión de la factura o refactura en la agencia que fue expedida para completar la trazabilidad de tu vehiculo."
+      },
+      {
+        "pregunta": "Si no soy único dueño, ¿cómo debo de subir mi factura?",
+        "respuesta": "Tienes que subir la factura original con endosos o la refactura de tu vehículo en un documento PDF."
       }
     ]
   },
   "sube-id": {
     "id": "sube-id",
     "titulo": "Sube tu ID",
-    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "video_url": "<div style=\"position: relative; padding-bottom: 49.375%; height: 0;\"><iframe src=\"https://www.loom.com/embed/f2a6d48d2743463aa915cc7b4030aae1?sid=fd61122e-ba9f-4aff-9b07-29b550949301\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\"></iframe></div>",
     "faqs": [
+      {
+        "pregunta": "¿Qué pasa si el documento está borroso o poco legible?",
+        "respuesta": "La calidad afecta la velocidad de respuesta.\nSi vas a subir una foto, asegúrate de que sea clara y nítida. Fotos movidas o poco legibles pueden hacer que tu expediente sea devuelto hasta que la imagen permita una correcta revisión."
+      },
+      {
+        "pregunta": "El sistema me dice que mi documento no coincide, pero estoy seguro de que es correcto. ¿Qué hago?",
+        "respuesta": "Puede tratarse de un error de lectura automática. Nuestro equipo validará tu documento de forma manual para que el proceso no se detenga."
+      },
+      {
+        "pregunta": "¿Puedo subir una foto tomada con mi celular?",
+        "respuesta": "Sí, siempre que sea clara, sin reflejos y con buena resolución, sin cortes, ni tachaduras. También puedes escanearla y guardarla en PDF."
+      },
       {
         "pregunta": "¿Qué tipo de identificación puedo subir?",
         "respuesta": "Puedes usar cualquiera de estas:\n\n• INE (ambos lados).\n• Pasaporte.\n• Cédula profesional."
@@ -168,22 +196,7 @@ const temas = {
       },
       {
         "pregunta": "¿Qué pasa si los datos de mi identificación no coinciden con mis otros documentos?",
-        "respuesta": "Para evitar retrasos, asegúrate de que tu ID tenga exactamente el mismo nombre y CURP que tu Constancia de Situación Fiscal y demás documentos. Si hay una diferencia, deberás corregirla antes de continuar."
-      }
-    ]
-  },
-  "sube-curp": {
-    "id": "sube-curp",
-    "titulo": "Sube tu CURP",
-    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "faqs": [
-      {
-        "pregunta": "¿Dónde encuentro mi CURP?",
-        "respuesta": "En el espacio para subir tu CURP encontrarás un enlace directo al sitio oficial: https://www.gob.mx/curp/\n\nAhí podrás consultar y descargar tu CURP de manera gratuita."
-      },
-      {
-        "pregunta": "¿Qué formato debe tener mi CURP?",
-        "respuesta": "Puedes subirlo en:\n\n• Foto clara y legible.\n• Archivo PDF descargado directamente de la plataforma oficial."
+        "respuesta": "Para evitar retrasos, asegúrate de que tu identificación tenga exactamente el mismo nombre en la tarjeta de circulación o factura."
       }
     ]
   },
@@ -193,8 +206,20 @@ const temas = {
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
+        "pregunta": "¿Qué pasa si el documento está borroso o poco legible?",
+        "respuesta": "La calidad afecta la velocidad de respuesta.\nSi vas a subir una foto, asegúrate de que sea clara y nítida. Fotos movidas o poco legibles pueden hacer que tu expediente sea devuelto hasta que la imagen permita una correcta revisión."
+      },
+      {
+        "pregunta": "El sistema me dice que mi documento no coincide, pero estoy seguro de que es correcto. ¿Qué hago?",
+        "respuesta": "Puede tratarse de un error de lectura automática. Nuestro equipo validará tu documento de forma manual para que el proceso no se detenga."
+      },
+      {
+        "pregunta": "¿Puedo subir una foto del documento?",
+        "respuesta": "Sí. Puedes tomar una foto directa o escanear el documento y subirlo en PDF.\nEntre mejor sea la calidad, más rápido podremos darte respuesta sobre tu pago."
+      },
+      {
         "pregunta": "¿En dónde encuentro mi Número de atención?",
-        "respuesta": "<img src='/images/helper-VP.png' alt='Ayuda para encontrar número de atención' style='max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>"
+        "respuesta": "Tu número de atención fue enviado por correo electrónico, también puedes obtenerlo del volante que te entregó tu ajustador.\n\nEste volante debe de estar firmado por ti y tu ajustador.\n\n<img src='/images/helper-VP.png' alt='Ayuda para encontrar número de atención' style='max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>"
       },
       {
         "pregunta": "¿Dónde obtengo este documento?",
@@ -202,30 +227,7 @@ const temas = {
       },
       {
         "pregunta": "¿Qué pasa si no me lo dieron o se me perdió?",
-        "respuesta": "Comunicate al correo: soluciones@anaseguros.com.mx"
-      }
-    ]
-  },
-  "sube-csf-domicilio": {
-    "id": "sube-csf-domicilio",
-    "titulo": "Sube tu Constancia de Situación Fiscal",
-    "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "faqs": [
-      {
-        "pregunta": "¿Qué es el CSF?",
-        "respuesta": "El CSF (Comprobante de Situación Fiscal) es un documento que emite el SAT."
-      },
-      {
-        "pregunta": "¿Cómo descargo mi CSF?",
-        "respuesta": "En el espacio determinado para subir ese documento encontrarás el link que te llevará directo al portal donde puedes descargarla."
-      },
-      {
-        "pregunta": "¿Qué comprobante de domicilio es válido?",
-        "respuesta": "Aceptamos recibos de luz, agua, teléfono, predial o estados de cuenta bancarios no mayores a 3 meses."
-      },
-      {
-        "pregunta": "¿Cómo tengo la carátula del estado de cuenta bancario?",
-        "respuesta": "Ingresa a la app de tu banco, busca tu estado de cuenta, descárgalo o toma una captura de pantalla a la primera hoja y súbela al portal de ANA Pronto Pago."
+        "respuesta": "Comunicate al correo: gloriagr@anaseguros.com.mx"
       }
     ]
   },
@@ -234,6 +236,18 @@ const temas = {
     "titulo": "Sube tu estado de cuenta bancario y comprobante de domicilio",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
+      {
+        "pregunta": "¿Qué pasa si el documento está borroso o poco legible?",
+        "respuesta": "La calidad afecta la velocidad de respuesta.\nSi vas a subir una foto, asegúrate de que sea clara y nítida. Fotos movidas o poco legibles pueden hacer que tu expediente sea devuelto hasta que la imagen permita una correcta revisión."
+      },
+      {
+        "pregunta": "El sistema me dice que mi documento no coincide, pero estoy seguro de que es correcto. ¿Qué hago?",
+        "respuesta": "Puede tratarse de un error de lectura automática. Nuestro equipo validará tu documento de forma manual para que el proceso no se detenga."
+      },
+      {
+        "pregunta": "¿Puedo subir una foto del documento?",
+        "respuesta": "Sí. Puedes tomar una foto directa o escanear el documento y subirlo en PDF.\nEntre mejor sea la calidad, más rápido podremos darte respuesta sobre tu pago."
+      },
       {
         "pregunta": "¿Qué comprobante de domicilio puedo usar?",
         "respuesta": "Puedes usar recibos de luz, agua, teléfono, predial o estados de cuenta bancarios que no sean mayores a 3 meses."
@@ -249,6 +263,18 @@ const temas = {
     "titulo": "Sube el acta constitutiva y/o poder notarial (solo personas morales)",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
+      {
+        "pregunta": "¿Qué pasa si el documento está borroso o poco legible?",
+        "respuesta": "La calidad afecta la velocidad de respuesta.\nSi vas a subir una foto, asegúrate de que sea clara y nítida. Fotos movidas o poco legibles pueden hacer que tu expediente sea devuelto hasta que la imagen permita una correcta revisión."
+      },
+      {
+        "pregunta": "El sistema me dice que mi documento no coincide, pero estoy seguro de que es correcto. ¿Qué hago?",
+        "respuesta": "Puede tratarse de un error de lectura automática. Nuestro equipo validará tu documento de forma manual para que el proceso no se detenga."
+      },
+      {
+        "pregunta": "¿Puedo subir una foto del documento?",
+        "respuesta": "Sí. Puedes tomar una foto directa o escanear el documento y subirlo en PDF.\nEntre mejor sea la calidad, más rápido podremos darte respuesta sobre tu pago."
+      },
       {
         "pregunta": "¿Qué es un acta constitutiva?",
         "respuesta": "Es el documento que establece la constitución de una empresa o sociedad mercantil, donde se definen sus objetivos, estructura y funcionamiento."
@@ -275,7 +301,7 @@ const temas = {
     "faqs": [
       {
         "pregunta": "¿Qué significa que un siniestro esté cancelado?",
-        "respuesta": "Significa que el siniestro fue cancelado por alguna razón específica que se explica en el video."
+        "respuesta": "Significa que decidiste cancelar tu siniestro y enviamos esta notificación automática para documentar los cambios del proceso."
       },
       {
         "pregunta": "¿Puedo reactivar un siniestro cancelado?",
@@ -301,17 +327,17 @@ const temas = {
   },
   "siniestro-aprobado": {
     "id": "siniestro-aprobado",
-    "titulo": "Siniestro aprobado",
+    "titulo": "Siniestro validado",
     "categoria": "status-pago",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
-        "pregunta": "¿Cuánto tiempo tarda el proceso de aprobación?",
-        "respuesta": "El proceso de aprobación puede tardar entre 5 a 10 días hábiles."
+        "pregunta": "¿Cuánto tiempo tarda el proceso de validación?",
+        "respuesta": "El proceso de validación puede tardar entre 5 a 10 días hábiles."
       },
       {
-        "pregunta": "¿Qué sigue después de la aprobación?",
-        "respuesta": "Una vez aprobado, se procederá con el pago según el método que hayas elegido."
+        "pregunta": "¿Qué sigue después de la validación?",
+        "respuesta": "Una vez validado, se procederá con el pago según el método que hayas elegido."
       }
     ]
   },
@@ -343,7 +369,7 @@ const temas = {
     "faqs": [
       {
         "pregunta": "¿Qué significa que mi siniestro esté cancelado?",
-        "respuesta": "Significa que tu siniestro fue cancelado por alguna razón específica que se explica en el video."
+        "respuesta": "Significa que decidiste cancelar tu siniestro y enviamos esta notificación automática para documentar los cambios del proceso."
       },
       {
         "pregunta": "¿Puedo reactivar mi siniestro cancelado?",
@@ -358,7 +384,7 @@ const temas = {
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
-        "pregunta": "¿Por qué se devuelve mi siniestro?",
+        "pregunta": "¿Por qué se devuelve mi número de atención?",
         "respuesta": "Tu siniestro se devuelve cuando falta información o documentos requeridos."
       },
       {
@@ -369,17 +395,17 @@ const temas = {
   },
   "siniestro-aprobado": {
     "id": "siniestro-aprobado",
-    "titulo": "Siniestro aprobado",
+    "titulo": "Siniestro validado",
     "categoria": "status-pago",
     "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "faqs": [
       {
-        "pregunta": "¿Cuánto tiempo tarda mi proceso de aprobación?",
-        "respuesta": "Tu proceso de aprobación puede tardar entre 5 a 10 días hábiles."
+        "pregunta": "¿Cuánto tiempo tarda mi proceso de validación?",
+        "respuesta": "Tu proceso de validación puede tardar entre 5 a 10 días hábiles."
       },
       {
-        "pregunta": "¿Qué sigue después de que me aprueben mi siniestro?",
-        "respuesta": "Una vez que te aprueben tu siniestro, procederemos con el pago según el método que hayas elegido."
+        "pregunta": "¿Qué sigue después de que me validen mi siniestro?",
+        "respuesta": "Una vez que te validen tu siniestro, procederemos con el pago según el método que hayas elegido."
       }
     ]
   },
@@ -411,15 +437,11 @@ const temas = {
     "faqs": [
       {
         "pregunta": "¿Cuáles son los métodos de pago que puedo usar?",
-        "respuesta": "Puedes elegir entre transferencia bancaria, cheque o depósito directo a tu cuenta."
+        "respuesta": "Puedes elegir entre transferencia bancaria o cheque. El monto se reflejará en tu cuenta en un plazo de 24 horas si se procesa antes de las 3:00 p.m.; de lo contrario, podría tardar hasta 48 horas."
       },
       {
         "pregunta": "¿Cuánto tiempo tarda mi pago?",
         "respuesta": "Una vez que te aprueben tu siniestro, tu pago se procesa en 24-48 horas hábiles."
-      },
-      {
-        "pregunta": "¿Qué documentos necesito para cobrar mi pago?",
-        "respuesta": "Solo necesitas presentar una identificación oficial y comprobante de cuenta bancaria."
       }
     ]
   }
@@ -434,9 +456,7 @@ app.get('/api/temas', (req, res) => {
     'sube-id',
     'sube-factura',
     'sube-volante',
-    'sube-csf-domicilio',
     'sube-estado-cuenta',
-    'sube-curp',
     'acta-constitutiva'
   ];
   
@@ -480,6 +500,7 @@ app.get('/debug-tema/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'tema-debug.html'));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`También accesible desde otros dispositivos en: http://192.168.0.22:${PORT}`);
 });

@@ -98,9 +98,11 @@ class CentroAyuda {
         const icono = iconos[tema.id] || '📝';
 
         card.innerHTML = `
-            <div class="icono" aria-hidden="true">${icono}</div>
-            <h3>${tema.titulo}</h3>
-            <p>Haz clic para ver el video tutorial y preguntas frecuentes</p>
+            <div class="card-content">
+                <div class="icono" aria-hidden="true">${icono}</div>
+                <h3>${tema.titulo}</h3>
+                <p>Haz clic para ver el video tutorial y preguntas frecuentes</p>
+            </div>
         `;
 
         return card;
